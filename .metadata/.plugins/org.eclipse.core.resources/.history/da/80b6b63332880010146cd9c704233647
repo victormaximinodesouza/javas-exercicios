@@ -1,0 +1,41 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class listas_03 {
+
+	public static void main(String[] args) {
+		List<String> cores = new ArrayList<>();
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Quantas cores voce quer digitar?");
+		int n = sc.nextInt();
+		sc.nextLine();
+		
+		
+		for (int i =0; i < n; i++) {
+			System.out.print("Digite uma cor: ");
+			String c = sc.nextLine();
+			cores.add(c);
+		}
+		
+		
+		for(String f: cores) {
+			System.out.print(f + " ");
+			
+	}
+		System.out.println("\n-------------");
+		for(String s : cores) {
+			if (s -> s,("Amarelo")) {
+				System.out.println(s + "Contém amarelo");
+			} else {
+				System.out.println("Não temos nenhum ");
+			}
+			
+		}
+	}
+
+}
+	

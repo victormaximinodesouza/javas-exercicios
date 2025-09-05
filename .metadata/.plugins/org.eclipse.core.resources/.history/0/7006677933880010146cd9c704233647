@@ -1,0 +1,11 @@
+package att_listas;
+
+public class listas_04 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner()
+
+	}
+
+}

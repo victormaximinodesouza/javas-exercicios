@@ -1,0 +1,35 @@
+package application;
+
+public class Func {
+	public Double salary;
+	public String func;
+	
+	public Func(Double salary, String func) {
+		super();
+		this.salary = salary;
+		this.func = func;
+	}
+	
+	
+	public Double getSalary() {
+		return salary;
+	}
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+	public String getFunc() {
+		return func;
+	}
+	public void setFunc(String func) {
+		this.func = func;
+	}
+
+
+	
+	public String toString() {
+		return 
+	}
+	
+	
+
+}

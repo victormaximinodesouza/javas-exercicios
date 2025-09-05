@@ -1,0 +1,42 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class listas_06 {
+
+	public static void main(String[] args) {
+		List<Double> nota1 = new ArrayList<>();
+		List<Double> nota2 = new ArrayList<>();
+		List<String> name = new ArrayList<>();
+		List<Double> mediaf = new ArrayList<>();
+		
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		
+		for(int i = 0; i < n; i ++) {
+			System.out.print("Nota 1:");
+			double a = sc.nextDouble();
+			System.out.print("Nota 2: ");
+			double b = sc.nextDouble();
+			System.out.println("Nome do aluno");
+			String c = sc.nextLine();
+		}
+		
+		for(Double not1: nota1) {
+			System.out.println(not1);
+		}
+		for(Double not2: nota2){
+			System.out.println(not2);
+		}
+		for(Double media: mediaf) {
+			double mediafinal = nota1  (nota1+ nota2 / 2.0;) 
+		}
+		
+		
+		
+
+	}
+
+}

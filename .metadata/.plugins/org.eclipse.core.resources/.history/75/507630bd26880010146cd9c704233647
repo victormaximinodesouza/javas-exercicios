@@ -1,0 +1,41 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.sun.org.apache.xerces.internal.impl.xpath.XPath.Step;
+
+public class listas_02 {
+
+	public static void main(String[] args) {
+		List<String> node = new ArrayList<>();
+		
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Quantos nomes vc quer digitar?");
+		int n = sc.nextInt();
+		sc.nextLine();
+		
+		
+		
+		for(int i = 0; i < n;  i++) {
+			System.out.print("Digite um nome: ");
+			String name = sc.nextLine();
+			node.add(name);
+		
+		}
+		
+		for(String quant : node) {
+			System.out.print(quant + " ");
+		}
+		
+		System.out.println("Removi pessoas");
+		for(String remove: node) {
+			node.removeIf(x -> x.charAt(0)) = "M");
+			System.out.println(remove);
+		}
+
+	}
+
+}

@@ -1,0 +1,48 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class atividade {
+
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		
+		List<String> list = new ArrayList<>(5);
+		
+		String n;
+		System.out.print("Digite nomes: ");
+		n = sc.nextLine();
+		
+		
+		for(int i = 0; i <  n.length(); i+
+		
+		
+		for(String v: list) {
+			System.out.println(v);
+		}
+		
+		
+
+	
+	/*	List<String> list = new ArrayList<>();
+		
+		list.add("Anna");
+		list.add("KOLOKOLO");
+		list.add("Programador");
+		list.add("KULO");
+		
+		for(String f: list) {
+			System.out.print(f + " ");
+		}
+	*/	
+		
+	
+		
+		
+			
+		
+		
+	}
+}

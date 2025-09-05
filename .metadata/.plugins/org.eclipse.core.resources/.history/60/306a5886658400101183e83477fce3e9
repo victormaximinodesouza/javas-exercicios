@@ -1,0 +1,42 @@
+package application;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("Iniciando cadastro");
+
+        List<Func> funcionarios = new ArrayList<>();
+
+     
+        funcionarios.add(new Func("Maria", LocalDate.of(1990, 10, 5), new BigDecimal("2500.50"), "Analista"));
+        funcionarios.add(new Func("João", LocalDate.of(1985, 12, 20), new BigDecimal("3200.75"), "Desenvolvedor"));
+        funcionarios.add(new Func("Ana", LocalDate.of(1992, 7, 15), new BigDecimal("2100.00"), "Analista"));
+        funcionarios.add(new Func("Carlos", LocalDate.of(1980, 10, 30), new BigDecimal("4000.00"), "Gerente"));
+        funcionarios.add(new Func("Beatriz", LocalDate.of(1995, 5, 12), new BigDecimal("1800.00"), "Desenvolvedor"));
+
+        System.out.println("\nEquipe cadastrada:");
+        funcionarios.forEach(System.out::println);
+
+       
+        System.out.println("\nInfelizmente, o João foi removido da equipe...");
+        funcionarios.removeIf(f -> f.getNome().equalsIgnoreCase("João"));
+
+        System.out.println("\nEquipe atualizada:");
+        funcionarios.forEach(System.out::println);
+
+     
+        System.out.println("\nAplicando aumento de 10% para todos os funcionários...");
+        funcionarios.forEach(f -> f.aumentarSalario(new BigDecimal("10")));
+
+        System.out.println("\nSalários atualizados:");
+        funcionarios.forEach(System.out::println);
+
+        System.out.println("\nPronto! A equipe está atualizada e motivada!");
+    }
+}

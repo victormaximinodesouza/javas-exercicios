@@ -1,0 +1,17 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class lista_08 {
+
+	public static void main(String[] args) {
+		List<Double> list = new ArrayList<>();
+		List<String> name = new ArrayList<>();
+		
+		
+		
+
+	}
+
+}

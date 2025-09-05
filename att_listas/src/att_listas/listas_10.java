@@ -1,0 +1,31 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class listas_10 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		List<String> list = new ArrayList<>();
+		
+		System.out.print("Quantos nomes vc quer digitar?");
+		int n = sc.nextInt();
+		
+		sc.nextLine();
+		
+		for(int i = 0; i < n; i ++ ) {
+			System.out.print("Digite um nome");
+			String s = sc.nextLine();
+			list.add(s);
+		}
+		
+		for(String f : list) {
+			System.out.println(f);
+		}
+
+	}
+
+}

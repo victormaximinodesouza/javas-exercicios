@@ -1,0 +1,28 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class listas_09 {
+
+	public static void main(String[] args) {
+
+		List<Integer> list = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		
+		for(int i = 0; i < 10 ; i++) {
+			System.out.println("Digite um numero");
+			int s = sc.nextInt();
+		}
+		
+		int pares = list.get(0);
+		
+		for(Integer paress: list) {
+			if(paress % 2 ==0)
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,54 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class listas_06 {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		
+		List<Double> nota1 = new ArrayList<>();
+		List<Double> nota2 = new ArrayList<>();
+		List<String> name = new ArrayList<>();
+		List<Double> mediaf = new ArrayList<>();
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Quantos alunos? ");
+		int n = sc.nextInt();
+		
+		for(int i = 0; i < n; i ++) {
+			System.out.print("Nota 1:");
+			double a = sc.nextDouble();
+			nota1.add(a);
+			System.out.print("Nota 2: ");
+			double b = sc.nextDouble();
+			nota2.add(b);
+			sc.nextLine();
+			
+			System.out.print("Nome do aluno");
+			String c = sc.nextLine();
+			name.add(c);
+			
+			double media = (a + b) / 2.0;
+			mediaf.add(media);
+		}
+		
+	
+		
+		for(int i = 0; i < n; i++) {
+			System.out.println("-------------");
+			System.out.println("Name = " + name);
+			System.out.println("Nota 1 = " + nota1);
+			System.out.println("Nota 2 = " + nota2);
+			System.out.println("Media = " + mediaf);
+		}
+		
+		
+		
+
+	}
+
+}

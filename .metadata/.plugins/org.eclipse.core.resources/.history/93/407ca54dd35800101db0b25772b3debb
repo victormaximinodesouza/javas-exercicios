@@ -1,0 +1,20 @@
+package teste01;
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("Olá, Pessoal");
+		System.out.println("Olá , Tudo bem?");
+		
+		int y = 32;
+		System.out.println(y);
+		
+		double x = 10.34;
+		System.out.println(x);
+		System.out.printf("%.4f%n" , x);
+		
+
+
+	}
+
+}

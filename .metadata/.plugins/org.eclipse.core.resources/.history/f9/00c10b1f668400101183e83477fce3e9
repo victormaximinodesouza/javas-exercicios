@@ -1,0 +1,52 @@
+package application;
+
+import java.math.BigDecimal;
+import java.text.NumberFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+import java.util.Objects;
+
+public class Func{
+
+    private static final DateTimeFormatter formatoDATA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private static final NumberFormat formatoSALARIO = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+
+    private BigDecimal salario;
+    private final String funcao;
+
+    public Func(String nome, LocalDate dataNascimento, BigDecimal salario, String funcao) {
+        this.salario = Objects.requireNonNull(salario);
+        this.funcao = Objects.requireNonNull(funcao);
+    }
+
+    public BigDecimal getSalario() {
+        return salario;
+    }
+
+    public String getFuncao() {
+        return funcao;
+    }
+
+    public void aumentarSalario(BigDecimal percentual) {
+        if (percentual == null || percentual.compareTo(BigDecimal.ZERO) <= 0) {
+            System.out.println("Ops! Percentual inválido para aumento. Nada foi alterado.");
+            return;
+        }
+        BigDecimal aumento = salario.multiply(percentual).divide(BigDecimal.valueOf(100));
+        salario = salario.add(aumento);
+        System.out.printf("O salário de %s foi aumentado em %s%% e agora é %s%n",
+                getNome(),
+                percentual.toPlainString(),
+                formatoSALARIO.format(salario));
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Funcionário: %s%nNascimento: %s%nFunção: %s%nSalário: %s%n",
+                getNome(),
+                getDataNascimento().format(formatoDATA),
+                funcao,
+                formatoSALARIO.format(salario));
+    }
+}

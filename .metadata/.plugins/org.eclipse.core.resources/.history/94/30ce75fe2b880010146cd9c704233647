@@ -1,0 +1,26 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+
+public class listas_02 {
+
+	public static void main(String[] args) {
+		List<String> node = new ArrayList<>();
+		
+		
+		node.add("Maça");
+		node.add("Laranja");
+		node.add("Laranja");
+		
+		for(String f : node) {
+			sysou
+		}
+		
+		
+
+	}
+}

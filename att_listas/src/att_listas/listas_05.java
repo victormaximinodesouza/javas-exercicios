@@ -1,0 +1,33 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class listas_05 {
+
+	public static void main(String[] args) {
+		List<Integer> list = new ArrayList<>();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Quantos numeros?");
+		int s = sc.nextInt();
+		
+		for(int i = 0; i < s; i++) {
+			System.out.print("Digite um numero");
+			int o = sc.nextInt();
+			list.add(o);
+		}
+		
+		
+		System.out.println("Listas de Pares");
+		for(Integer pares: list) {
+			if(pares % 2 == 0) {
+				System.out.print(pares + " ");
+			}
+		}
+		
+	}
+
+}

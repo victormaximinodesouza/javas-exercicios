@@ -1,0 +1,28 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class listas_04 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		List<Integer> list = new ArrayList<>();
+		System.out.print("How many numbers? ");
+		int g = sc.nextInt();
+		
+		for(int i = 0; i < g; i++ ) {
+			System.out.print("Digite um numero");
+			int s = sc.nextInt();
+			list.add(s);
+		
+		}
+		
+		for(Integer print : list)
+
+	}
+
+}

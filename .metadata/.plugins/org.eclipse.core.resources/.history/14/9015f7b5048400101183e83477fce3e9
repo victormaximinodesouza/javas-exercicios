@@ -1,0 +1,21 @@
+package application;
+
+public class att_01 {
+	private Integer id;
+	private String name;
+	private Double salary;
+	
+
+	public Employee(){	
+	}
+
+
+	public att_01(Integer id, String name, Double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+	
+	
+}

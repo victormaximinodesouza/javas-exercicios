@@ -1,0 +1,32 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+
+public class listas_02 {
+
+	public static void main(String[] args) {
+		List<String> node = new ArrayList<>();
+		
+		
+		node.add("Maça");
+		node.add("Uva");
+		node.add("Laranja");
+		
+		for(String f : node) {
+			System.out.print(f + " ");
+		}
+		
+		System.out.println("\n -----------");
+		node.remove( "Maça");
+		for(String o : node) {
+			System.out.println(o);
+		}
+		
+		
+
+	}
+}

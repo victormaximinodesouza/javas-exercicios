@@ -1,0 +1,10 @@
+package att_listas;
+
+public class lista_07 {
+
+	public static void main(String[] args) {
+		List<String> list = 
+
+	}
+
+}

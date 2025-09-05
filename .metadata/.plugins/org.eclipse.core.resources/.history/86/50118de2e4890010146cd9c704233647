@@ -1,0 +1,17 @@
+package matriz;
+
+import java.util.Scanner;
+
+public class att_01 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int m1 = sc.nextInt();
+		int m2 = sc.nextInt();
+		
+		int[][] mat = new int[m1][m2]; 
+
+	}
+
+}

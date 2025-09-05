@@ -1,0 +1,59 @@
+package vetores;
+
+import java.util.Scanner;
+
+public class testes {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int n;
+		System.out.print("quantas pessoas vao ser digitadas: ");
+		n = sc.nextInt();
+		
+		
+		String[] s = new String[n];
+		int[] vect = new int[n];
+		
+		
+		
+	
+		for(int i = 0; i < vect.length; i++){
+			sc.nextLine();
+			System.out.print("Digite o nome: ");
+			s[i] = sc.nextLine();
+
+
+			System.out.print("Digite a idade");
+			vect[i] = sc.nextInt();
+			}
+		
+		int maior = vect[0];
+		for(int valor : vect) {
+			if(valor > maior) {
+				maior = valor;
+			}
+		}
+		
+		
+		int conte = 0;
+		int posicao = 0;
+		int maisvelha  = vect[0];
+		for(int i = 0; i < vect.length;i++) {
+			if(vect[i] > maisvelha) {
+				maisvelha = vect[i];
+				posicao = i;
+				conte++;
+			}
+		}
+		
+
+		
+		
+		
+	System.out.println("Maior numero " + maior);
+	System.out.println(s[posicao] + " Pode tirar habilitação");
+
+	}
+	
+}

@@ -1,0 +1,71 @@
+package application;
+
+import java.math.BigDecimal;
+import java.text.NumberFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
+public class Func {
+
+    // Formatos que vamos usar para mostrar a data e o salário bonitinho
+    private static final DateTimeFormatter DATA_FORMATADA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private static final NumberFormat SALARIO_FORMATADO = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+
+    // Informações do funcionário - essas não mudam depois que a gente cria o objeto
+    private final String nome;
+    private final LocalDate dataNascimento;
+    private BigDecimal salario;  // salário pode mudar, então não é final
+    private final String funcao;
+
+   
+    public Func(String nome, LocalDate dataNascimento, BigDecimal salario, String funcao) {
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.salario = salario;
+        this.funcao = funcao;
+    }
+
+   
+    public String getNome() {
+        return nome;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public BigDecimal getSalario() {
+        return salario;
+    }
+
+    public String getFuncao() {
+        return funcao;
+    }
+
+   
+    public void aumentarSalario(BigDecimal percentual) {
+        if (percentual == null || percentual.compareTo(BigDecimal.ZERO) <= 0) {
+            System.out.println("Ei, esse percentual aí não é válido. Nada foi aumentado.");
+            return;
+        }
+        
+        BigDecimal aumento = salario.multiply(percentual).divide(BigDecimal.valueOf(100));
+        salario = salario.add(aumento);
+        System.out.printf("Legal! O salário do %s subiu %.2f%% e agora é %s%n",
+                nome,
+                percentual,
+                SALARIO_FORMATADO.format(salario));
+    }
+
+    
+    
+    public String toString() {
+        return String.format(
+                "Funcionário: %s\nNascimento: %s\nFunção: %s\nSalário: %s\n",
+                nome,
+                dataNascimento.format(DATA_FORMATADA),
+                funcao,
+                SALARIO_FORMATADO.format(salario));
+    }
+}

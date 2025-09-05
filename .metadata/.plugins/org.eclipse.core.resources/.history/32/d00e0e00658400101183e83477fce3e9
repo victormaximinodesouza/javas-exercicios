@@ -1,0 +1,38 @@
+package application;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Objects;
+
+public class Pessoa {
+
+    private static final DateTimeFormatter FORMATO_DATA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+    private final String nome;
+    private final LocalDate dataNascimento;
+
+    public Pessoa(String nome, LocalDate dataNascimento) {
+        this.nome = Objects.requireNonNull(nome);
+        this.dataNascimento = Objects.requireNonNull(dataNascimento, "Data de nascimento não pode ser nula");
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public int getIdade() {
+        return LocalDate.now().getYear() - dataNascimento.getYear();
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Pessoa: %s%nData de nascimento: %s%nIdade: %d anos%n",
+                nome,
+                dataNascimento.format(FORMATO_DATA),
+                getIdade());
+    }
+}

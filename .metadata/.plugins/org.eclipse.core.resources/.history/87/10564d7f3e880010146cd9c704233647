@@ -1,0 +1,14 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class listas_06 {
+
+	public static void main(String[] args) {
+		List<Double> n = new ArrayList<>();
+		
+
+	}
+
+}

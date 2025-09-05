@@ -1,0 +1,47 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+
+public class listas_02 {
+
+	public static void main(String[] args) {
+		List<String> node = new ArrayList<>();
+		
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Quantos nomes vc quer digitar?");
+		int n = sc.nextInt();
+		sc.nextLine();
+		
+		
+		
+		for(int i = 0; i < n;  i++) {
+			System.out.print("Digite um nome: ");
+			String name = sc.nextLine();
+			node.add(name);
+		
+		}
+		
+		
+		System.out.println("---------------");
+		
+		System.out.println("\nRemovi pessoas:");
+		for(String x: node) {
+			if(node.removeIf(x -> x.charAt(0) == 'M'));{
+				
+			}
+			System.out.println(x);
+		}
+		
+		System.out.println("----------------------");
+		for(String quant : node) {
+			System.out.print(quant + " ");
+		}
+
+	}
+
+}

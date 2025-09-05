@@ -1,0 +1,22 @@
+package processamento_dados;
+
+public class teste {
+
+	public static void main(String[] args) {
+		//int x , y;
+		 //x = 5;
+		 //y = 2 * x;
+		 
+		 //System.out.println(y);
+		
+		double a;
+		int b;
+		
+		a = 5;
+		b = (int) a;
+		
+		
+		System.out.println(b);
+	}
+
+}

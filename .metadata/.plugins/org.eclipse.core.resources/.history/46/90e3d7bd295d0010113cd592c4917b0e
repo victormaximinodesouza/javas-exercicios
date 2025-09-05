@@ -1,0 +1,18 @@
+package atividade_faculdade;
+
+public class faculdade {
+
+	public static void main(String[] args) {
+		//int o;
+		//o = 1362415094;
+		//System.out.println("Victor maximino de souza " + o);
+
+		int s;
+		int y; 
+		s = 51;
+		y = 60;
+		int result = s + y;
+		System.out.println("A soma desse dois números é" + result);
+	}
+
+}

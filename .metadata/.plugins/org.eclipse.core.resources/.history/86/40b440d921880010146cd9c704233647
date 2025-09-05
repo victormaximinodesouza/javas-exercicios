@@ -1,0 +1,15 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class listas_01 {
+
+	public static void main(String[] args) {
+		
+		List<String> mod = new ArrayList<>();
+		
+
+	}
+
+}

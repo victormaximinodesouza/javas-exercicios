@@ -1,0 +1,12 @@
+package atividade_faculdade;
+
+public class faculdade {
+
+	public static void main(String[] args) {
+		int o;
+		o = 1362415094;
+		System.out.println("Victor maximino de souza" + o);
+
+	}
+
+}

@@ -1,0 +1,41 @@
+package application;
+
+public class Func {
+	public Double salary;
+	public String func;
+	
+	public Func(Double salary, String func) {
+		super();
+		this.salary = salary;
+		this.func = func;
+	}
+	
+	
+	public Double getSalary() {
+		return salary;
+	}
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+	public String getFunc() {
+		return func;
+	}
+	public void setFunc(String func) {
+		this.func = func;
+	}
+	
+	 public void increaseSalary(salary percentage) {
+	        salary aumento = salary.multiply(percentage).divide(new BigDecimal("100"));
+	        salario = salario.add(aumento);
+	    }
+
+
+	
+	public String toString() {
+		return String.format("Nome: %s , NAscimento : %s , Salário: R$ %.3f%n" , 
+				get);
+	}
+	
+	
+
+}

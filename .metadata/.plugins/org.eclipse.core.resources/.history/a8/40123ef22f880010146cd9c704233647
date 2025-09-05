@@ -1,0 +1,29 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class listas_03 {
+
+	public static void main(String[] args) {
+		List<String> cores = new ArrayList<>();
+		
+		cores.add("Vermelho");
+		cores.add("Azul");
+		cores.add("Verde");
+		cores.add("Amarelo");
+		
+		for(String f: cores) {
+			System.out.println(f);
+			
+	}
+		for(String s : cores) {
+			if (s.contains("amarelo")); {
+				System.out.println(s +"Contém Amarelo ");
+			}
+			
+		}
+	}
+
+}
+	

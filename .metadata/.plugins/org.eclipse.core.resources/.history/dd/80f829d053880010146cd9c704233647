@@ -1,0 +1,34 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class lista_08 {
+
+	public static void main(String[] args) {
+		List<Double> list = new ArrayList<>();
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		for(int i = 0; i < 5; i++){
+			System.out.println("Digite uma nota ");
+			double s = sc.nextDouble();
+			list.add(s);
+			
+			
+			
+		}
+		
+		
+		
+		for(Double media: list) {
+			double media = 
+		}
+		
+		
+
+	}
+
+}

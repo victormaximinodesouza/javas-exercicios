@@ -1,0 +1,12 @@
+package att_listas;
+
+import java.util.List;
+
+public class listas_03 {
+
+	public static void main(String[] args) {
+		List<String> cores = ArrayList<>();
+
+	}
+
+}

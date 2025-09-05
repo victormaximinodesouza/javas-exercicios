@@ -1,0 +1,10 @@
+package att_listas;
+
+public class lista_08 {
+
+	public static void main(String[] args) {
+		List<Double> list = new ArrayList
+
+	}
+
+}

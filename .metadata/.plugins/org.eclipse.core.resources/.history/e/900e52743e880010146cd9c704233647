@@ -1,0 +1,10 @@
+package att_listas;
+
+public class listas_06 {
+
+	public static void main(String[] args) {
+		List<Double> float = new ArrayList
+
+	}
+
+}

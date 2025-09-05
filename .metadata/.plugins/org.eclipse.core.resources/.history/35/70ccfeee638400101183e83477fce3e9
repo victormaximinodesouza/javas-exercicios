@@ -1,0 +1,67 @@
+package application;
+
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Objects;
+
+public class Func {
+
+    private static final DateTimeFormatter formatoDATA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private static final DecimalFormat formatoSALARIO = new DecimalFormat("#,##0.00");
+
+    private final String nome;
+    private final LocalDate dataNascimento;
+    private BigDecimal salario;
+    private final String funcao;
+
+    public Func(String nome, LocalDate dataNascimento, BigDecimal salario, String funcao) {
+        this.nome = Objects.requireNonNull(nome, "O nome do funcionário não pode ser nulo.");
+        this.dataNascimento = Objects.requireNonNull(dataNascimento, "A data de nascimento não pode ser nula.");
+        this.salario = Objects.requireNonNull(salario, "O salário não pode ser nulo.");
+        this.funcao = Objects.requireNonNull(funcao, "A função do funcionário não pode ser nula.");
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public BigDecimal getSalario() {
+        return salario;
+    }
+
+    public String getFuncao() {
+        return funcao;
+    }
+
+    public void aumentarSalario(BigDecimal percentual) {
+        if (percentual == null || percentual.compareTo(BigDecimal.ZERO) <= 0) {
+            System.out.println("Percentual inválido para aumento de salário. Operação ignorada.");
+            return;
+        }
+
+        BigDecimal aumento = salario.multiply(percentual).divide(BigDecimal.valueOf(100));
+        salario = salario.add(aumento);
+
+        System.out.printf("Salário do funcionário %s aumentado em %s%%. Novo salário: R$ %s%n",
+                          nome,
+                          percentual.toPlainString(),
+                          formato_SALARIO.format(salario));
+    }
+
+    
+    public String toString() {
+        return String.format(
+            "Nome: %s | Nascimento: %s | Salário: R$ %s | Função: %s",
+            nome,
+            dataNascimento.format(FORMATO_DATA),
+            FORMATO_SALARIO.format(salario),
+            funcao
+        );
+    }
+}

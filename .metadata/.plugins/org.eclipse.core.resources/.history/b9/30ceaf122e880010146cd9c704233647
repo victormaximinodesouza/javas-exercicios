@@ -1,0 +1,22 @@
+package att_listas;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class listas_03 {
+
+	public static void main(String[] args) {
+		List<String> cores = new ArrayList<>();
+		
+		cores.add("Vermelho");
+		cores.add("Azul");
+		cores.add("Verde");
+		
+		cores.add(2, "Amarelo");
+		
+		for()
+		System.out.println(cores);
+
+	}
+
+}
